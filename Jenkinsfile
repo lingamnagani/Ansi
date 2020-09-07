@@ -8,7 +8,7 @@ Pipeline{
         }
         stage('Execute Ansible'){
             steps{
-             ansiblePlaybook becomeUser: 'Lingam', credentialsId: '84d518af-d2ff-4019-8d7d-0db03ee98dc5', disableHostKeyChecking: true, installation: 'Ansi', inventory: 'dev.inv', playbook: 'apache.yml'
+             ansiblePlaybook credentialsId: 'privatekey', disableHostKeyChecking: true, installation: 'Ansi', inventory: 'dev.inv', playbook: 'apache.yml'  
             }
         }
     }
